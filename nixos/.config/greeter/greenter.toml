@@ -1,0 +1,22 @@
+
+
+[appearance]
+scheme = "Noctalia"
+theme_mode = "dark"
+hide_logo = true
+
+[appearance.wallpaper]
+path = "/home/neo/neoconf/nixos/assets/wallpapers/nord-aurora.png"
+fill_mode = "crop"
+blur = 0.0
+tint = 0.15
+
+[clock]
+enabled = true
+position = "above-panel"
+time_format = "{:%H:%M}"
+date_format = "%A, %d %B %Y"
+
+[cursor]
+theme = "Bibata-Modern-Classic"
+size = 24

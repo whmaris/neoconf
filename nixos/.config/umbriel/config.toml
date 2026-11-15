@@ -1,0 +1,74 @@
+# umbriel settings
+
+[general]
+autostart = ["noctalia", "ghostty"]
+
+[layout]
+gap = 2
+
+[input.keyboard]
+layout = "us"
+
+[output.DP-2]
+workspaces = 4
+
+[[workspace]]
+index = 1
+layout.mode = "scrolling"
+
+[[workspace]]
+index = 2
+layout.mode = "stacking"
+
+[[workspace]]
+index = 3
+layout.mode = "dwindle"
+
+[[workspace]]
+index = 4
+layout.mode = "master"
+
+[keybinds]
+
+# Applications
+"Mod+Return" = { action = "spawn ghostty", repeat = false }
+"Mod" = "spawn noctalia msg panel-toggle launcher"
+
+# Window management
+"Mod+Q" = { action = "window-close", repeat = false }
+"Mod+Escape" = "session-quit"
+
+# Focus
+"Mod+Left" = "window-focus-left"
+"Mod+Down" = "window-focus-down"
+"Mod+Up" = "window-focus-up"
+"Mod+Right" = "window-focus-right"
+
+"Mod+H" = "window-focus-left"
+"Mod+J" = "window-focus-down"
+"Mod+K" = "window-focus-up"
+"Mod+L" = "window-focus-right"
+"Mod+F1" = "window-focus-next"
+
+# Move windows
+"Mod+Shift+Left" = "column-move-left"
+"Mod+Shift+Right" = "column-move-right"
+"Mod+Shift+Up" = "window-move-up"
+"Mod+Shift+Down" = "window-move-down"
+
+# Layout
+"Mod+F" = { action = "window-toggle-fullscreen", repeat = false }
+"Mod+R" = "window-cycle-primary-extent"
+"Mod+Comma" = "window-consume-left"
+"Mod+Period" = "window-consume-right"
+
+# Workspaces
+"Mod+1" = "workspace-switch 1"
+"Mod+2" = "workspace-switch 2"
+"Mod+3" = "workspace-switch 3"
+"Mod+4" = "workspace-switch 4"
+"Mod+5" = "workspace-switch 5"
+"Mod+6" = "workspace-switch 6"
+"Mod+7" = "workspace-switch 7"
+"Mod+8" = "workspace-switch 8"
+"Mod+9" = "workspace-switch 9"
