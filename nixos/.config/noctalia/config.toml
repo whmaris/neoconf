@@ -12,7 +12,6 @@ end = [
     "clipboard",
     "volume",
     "brightness",
-    "battery",
     "control-center",
     "tray",
     "notifications",
@@ -37,7 +36,7 @@ start = [ "launcher", "workspaces" ]
     opacity = 1.0
     padding = 6.0
 
-[battery.device."/org/freedesktop/UPower/devices/mouse_hidpp_battery_0"]
+[battery.device."/org/freedesktop/UPower/devices/battery_BAT0"]
 warning_threshold = 5
 
 [control_center]

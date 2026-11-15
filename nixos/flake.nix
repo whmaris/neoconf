@@ -44,7 +44,6 @@
 
       mkHost = name: {
         system = ./hosts/${name}/system.nix;
-        hardware = ./hosts/${name}/hardware-configuration.nix;
         home = ./hosts/${name}/home.nix;
       };
 
@@ -66,7 +65,6 @@
           inherit system;
           specialArgs = args;
           modules = [
-            host.hardware
             host.system
             inputs.umbriel.nixosModules.default
             inputs.noctalia.nixosModules.default
