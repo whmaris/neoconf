@@ -21,6 +21,9 @@
 
   services.displayManager.noctalia-greeter = {
     enable = true;
-    settings.session.default = "umbriel";
+    passwordlessSyncUsers = [ "neo" ];
+    # settings.session.default = "umbriel";
   };
+
+  security.polkit.enable = true;
 }
