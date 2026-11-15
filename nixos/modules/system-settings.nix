@@ -21,6 +21,7 @@
     enable = true;
     powerOnBoot = true;
   };
+  hardware.enableRedistributableFirmware = true;
 
   # Locale and Vietnamese input method
   time.timeZone = "Asia/Ho_Chi_Minh";

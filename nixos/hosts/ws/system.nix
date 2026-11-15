@@ -4,7 +4,5 @@
     ../../modules/desktop-system.nix
     ../../modules/programs-system.nix
   ];
-  networking = {
-    hostName = "ws";
-  };
+  networking.hostName = "ws";
 }
