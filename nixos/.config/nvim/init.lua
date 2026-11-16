@@ -50,7 +50,20 @@ require("gitsigns").setup()
 require("nvim-autopairs").setup()
 
 -- Autocomplete
-require("blink.cmp").setup({ keymap = { preset = "default" } })
+require("blink.cmp").setup({
+  keymap = {
+    preset = "super-tab",
+  },
+
+  completion = {
+    menu = {
+      auto_show = true,
+    },
+    documentation = {
+      auto_show = true,
+    },
+  },
+})
 
 -- LSP
 vim.lsp.config("*", {
