@@ -115,6 +115,7 @@
       defaultEditor = true;
       viAlias = true;
       vimAlias = true;
+      sideloadInitLua = true;
       extraPackages = with pkgs; [
         nil # Nix LSP
         nixfmt
@@ -140,7 +141,6 @@
         which-key-nvim
         nvim-autopairs
       ];
-      initLua = builtins.readFile ./../.config/nvim/init.lua;
     };
   };
 
