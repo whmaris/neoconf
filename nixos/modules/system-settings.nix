@@ -71,6 +71,11 @@
   # Enable un-free apps
   nixpkgs.config.allowUnfree = true;
 
+  # Allow insecure pkgs
+  nixpkgs.config.permittedInsecurePackages = [
+    "ventoy-1.1.18"
+  ];
+
   # Local login account and privileges
   users.users.neo = {
     isNormalUser = true;

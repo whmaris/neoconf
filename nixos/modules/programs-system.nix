@@ -1,6 +1,10 @@
 { pkgs, at, ... }:
 
 {
+  environment.systemPackages = with pkgs; [
+    ventoy
+  ];
+
   # Winbox.
   programs.winbox = {
     enable = true;
