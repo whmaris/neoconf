@@ -15,8 +15,14 @@
       package = pkgs.qemu_kvm;
       runAsRoot = true;
       swtpm.enable = true;
+      vhostUserPackages = with pkgs; [
+        virtiofsd
+      ];
     };
   };
+
+  # USB passthrough via SPICE
+  virtualisation.spiceUSBRedirection.enable = true;
 
   # Font
   fonts = {
