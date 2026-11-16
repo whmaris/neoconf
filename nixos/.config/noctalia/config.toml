@@ -17,6 +17,7 @@ end = [
     "notifications",
     "network",
     "bluetooth",
+    "battery",
     "clock",
     "session"
 ]
@@ -264,8 +265,8 @@ enabled = true
 enabled = true
 
 [widget.clock]
-font_scale = 0.84999999999999998
-scale = 0.84999999999999998
+font_scale = 1
+scale = 1.2
 
 [widget.control-center]
 enabled = true

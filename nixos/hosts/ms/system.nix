@@ -1,4 +1,4 @@
-{ lib, ... }:
+{ lib, pkgs, ... }:
 {
   imports = [
     ./hardware-configuration.nix
@@ -18,4 +18,7 @@
   swapDevices = [ { device = "/swap/swapfile"; } ];
 
   hardware.enableRedistributableFirmware = true;
+
+  # latest kernel
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 }
