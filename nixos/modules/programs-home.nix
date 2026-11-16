@@ -59,7 +59,53 @@
         email = "wheelhousemaris@gmail.com";
       };
     };
-    yazi.enable = true;
+    yazi = {
+      enable = true;
+      plugins = {
+        mount = pkgs.yaziPlugins.mount;
+      };
+      keymap.mgr.prepend_keymap = [
+        {
+          on = [
+            "M"
+            "M"
+          ];
+          run = "plugin mount";
+          desc = "Disk list (plugin)";
+        }
+        {
+          on = [
+            "M"
+            "m"
+          ];
+          run = "shell --block -- udiskie-mount -a";
+          desc = "Mount all";
+        }
+        {
+          on = [
+            "M"
+            "u"
+          ];
+          run = [
+            ''shell --block -- dir=$(findmnt -no TARGET -T .); case "$dir" in /run/media/*) dev=$(findmnt -no SOURCE "$dir"); cd / && udisksctl unmount -b "$dev" || { echo "Unmount lỗi"; read -r _; } ;; *) echo "Không ở trong ổ ngoài"; read -r _ ;; esac''
+            "cd ~"
+          ];
+          desc = "Unmount this disk";
+        }
+        {
+          on = [
+            "M"
+            "e"
+          ];
+          run = [
+            ''shell --block -- dir=$(findmnt -no TARGET -T .); case "$dir" in /run/media/*) dev=$(findmnt -no SOURCE "$dir"); disk=$(lsblk -no PKNAME "$dev" | head -n1); cd / && udisksctl unmount -b "$dev" && udisksctl power-off -b "/dev/''${disk:-$dev}" || { echo "Eject lỗi"; read -r _; } ;; *) echo "Không ở trong ổ ngoài"; read -r _ ;; esac''
+            "cd ~"
+          ];
+          desc = "Eject this disk";
+        }
+      ];
+
+    };
     zed-editor = {
       enable = true;
       #userSettings = builtins.fromJSON (builtins.readFile ./.config/zed/settings.json);
@@ -118,4 +164,11 @@
       onCalendar = "weekly";
     };
   };
+  services.udiskie = {
+    enable = true;
+    automount = true;
+    notify = true;
+    tray = "auto";
+  };
+
 }

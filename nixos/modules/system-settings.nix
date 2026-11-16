@@ -4,6 +4,10 @@
   # Boot
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.supportedFilesystems = [
+    "ntfs"
+    "exfat"
+  ];
 
   # Network and firewall policy.
   networking = {
@@ -46,6 +50,7 @@
   services = {
     flatpak.enable = true;
     printing.enable = true;
+    udisks2.enable = true;
     # Audio
     pipewire = {
       enable = true;
