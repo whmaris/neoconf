@@ -1,4 +1,4 @@
-{ lib, pkgs, ... }:
+{ lib, ... }:
 {
   imports = [
     ./hardware-configuration.nix
@@ -8,6 +8,8 @@
   ];
 
   networking.hostName = "ms";
+
+  # Add compress and noatime for hardware-configuration
   fileSystems = lib.genAttrs [ "/" "/home" "/nix" "/var/lib/libvirt/images" "/swap" ] (_: {
     options = [
       "compress=zstd"
@@ -15,10 +17,16 @@
     ];
   });
 
-  swapDevices = [ { device = "/swap/swapfile"; } ];
+  swapDevices = [
+    {
+      device = "/swap/swapfile";
+      size = 8 * 1024;
+    }
+  ];
 
+  # Set C flag for VM images
+  systemd.tmpfiles.rules = [ "h /var/lib/libvirt/images - - - - +C" ];
+
+  # Enable Redistributable Firmware
   hardware.enableRedistributableFirmware = true;
-
-  #latest kenrnel
-  boot.kernelPackages = pkgs.linuxPackages_latest;
 }

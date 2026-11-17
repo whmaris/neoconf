@@ -9,6 +9,9 @@
     "exfat"
   ];
 
+  #latest kenrnel
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+
   # Network and firewall policy.
   networking = {
     networkmanager.enable = true;
