@@ -3,8 +3,8 @@
   imports = [
     ./hardware-configuration.nix
     ../../modules/system-settings.nix
-    ../../modules/desktop-system.nix
-    ../../modules/programs-system.nix
+    ../../modules/system-apps.nix
+    ../../modules/system-desktop.nix
   ];
 
   networking.hostName = "ms";
@@ -19,6 +19,6 @@
 
   hardware.enableRedistributableFirmware = true;
 
-  # latest kernel
+  #latest kenrnel
   boot.kernelPackages = pkgs.linuxPackages_latest;
 }

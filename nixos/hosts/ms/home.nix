@@ -1,8 +1,9 @@
 { ... }:
 {
   imports = [
-    ../../modules/desktop-home.nix
-    ../../modules/programs-home.nix
+    ../../modules/home-desktop.nix
+    ../../modules/home-apps.nix
+    ../../modules/home-settings.nix
 
   ];
 
