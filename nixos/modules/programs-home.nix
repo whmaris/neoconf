@@ -17,6 +17,8 @@
       filen-desktop
       fastfetch
       btop
+      zathura
+      imv
     ])
     ++ lib.optionals (at [ "ws" ]) (
       with pkgs;
