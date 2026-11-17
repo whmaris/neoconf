@@ -53,7 +53,8 @@
   services = {
     flatpak.enable = true;
     printing.enable = true;
-    udisks2.enable = true;
+    udisks2.enable = true; # manager and mount removable storage devices
+    gvfs.enable = true; # Gnome virual file system support
     # Audio
     pipewire = {
       enable = true;

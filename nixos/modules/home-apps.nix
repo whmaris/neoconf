@@ -29,6 +29,7 @@
     );
 
   programs = {
+    luciole.enable = true;
     helium.enable = true;
     zen-browser.enable = true;
     bash = {

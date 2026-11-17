@@ -14,16 +14,26 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
     nix-flatpak.url = "github:gmodena/nix-flatpak/v0.8.0";
+
     noctalia = {
       url = "github:noctalia-dev/noctalia/cachix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
     umbriel.url = "github:noctalia-dev/umbriel/cachix";
+
+    luciole = {
+      url = "github:noctalia-dev/luciole";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -68,7 +78,6 @@
             host.system
             inputs.umbriel.nixosModules.default
             inputs.noctalia.nixosModules.default
-
             inputs.home-manager.nixosModules.home-manager
             {
               home-manager = {
@@ -80,6 +89,7 @@
                   inputs.nix-flatpak.homeManagerModules.nix-flatpak
                   inputs.noctalia.homeModules.default
                   inputs.umbriel.homeModules.default
+                  inputs.luciole.homeModules.default
                   inputs.zen-browser.homeModules.default
                   inputs.helium-browser.homeModules.default
                 ];
