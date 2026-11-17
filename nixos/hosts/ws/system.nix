@@ -25,7 +25,7 @@
   ];
 
   # Set C flag for VM images
-  systemd.tmpfiles.rules = [ "h /var/lib/libvirt/images - - - - +C" ];
+  systemd.tmpfiles.rules = [ "h /var/lib/libvirt/images - - - - =C" ];
 
   # Enable Redistributable Firmware
   hardware.enableRedistributableFirmware = true;
