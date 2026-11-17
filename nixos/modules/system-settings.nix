@@ -84,6 +84,7 @@
       "networkmanager"
       "wheel"
       "libvirtd"
+      "wireshark"
     ];
     shell = pkgs.fish;
   };

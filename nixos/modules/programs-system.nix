@@ -3,7 +3,15 @@
 {
   environment.systemPackages = with pkgs; [
     ventoy
+    usbutils
+    nmap
+    zenmap
   ];
+
+  # Wireshark
+  programs.wireshark = {
+    enable = true;
+  };
 
   # Winbox.
   programs.winbox = {
