@@ -85,6 +85,7 @@
       "wheel"
       "libvirtd"
       "wireshark"
+      "dialout"
     ];
     shell = pkgs.fish;
   };
