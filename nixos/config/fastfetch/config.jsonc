@@ -83,23 +83,24 @@
     },
     {
       "type": "cpu",
-      "key": "│   CPU         ",
+      "format": "{name}",
+      "key": "│   CPU        ",
       "keyColor": "bright_cyan"
     },
     {
       "type": "gpu",
-      "key": "│ 󰢮  GPU         ",
+      "key": "│ 󰢮  GPU        ",
       "keyColor": "bright_cyan",
       "format": "{1} {2}"
     },
     {
       "type": "memory",
-      "key": "│ 󰘚  Memory      ",
+      "key": "│ 󰘚  Memory     ",
       "keyColor": "bright_cyan"
     },
     {
       "type": "disk",
-      "key": "│ 󰋊  Disk (Root) ",
+      "key": "│ 󰋊  Disk (Root)",
       "folders": "/",
       "keyColor": "bright_cyan"
     },
