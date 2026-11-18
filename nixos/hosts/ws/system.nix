@@ -5,6 +5,7 @@
     ../../modules/system-settings.nix
     ../../modules/system-apps.nix
     ../../modules/system-desktop.nix
+    ../../modules/gaming.nix
   ];
 
   networking.hostName = "ws";
