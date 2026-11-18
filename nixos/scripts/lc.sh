@@ -37,3 +37,4 @@ link_config greeter
 link_config zed
 link_config yazi
 link_config nvim
+link_config fastfetch

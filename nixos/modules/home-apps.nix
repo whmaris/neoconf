@@ -35,7 +35,6 @@
     fish = {
       enable = true;
       shellAliases = {
-        nrs = "sudo nixos-rebuild switch --flake ~/neoconf/nixos#ws";
         ndg = "sudo nix-env --profile /nix/var/nix/profiles/system --delete-generations";
         ngc = "sudo nix-collect-garbage";
       };
