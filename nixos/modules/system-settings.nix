@@ -67,6 +67,11 @@
     power-profiles-daemon.enable = true;
   };
   security.rtkit.enable = true;
+
+  # Secret Service for credential storage and automatic unlock via PAM
+  services.oo7.enable = true;
+  security.pam.services.greetd.oo7.enable = true;
+
   # Enable flakes
   nix.settings.experimental-features = [
     "nix-command"
