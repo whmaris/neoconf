@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-REPO="$HOME/neoconf/nixos/.config"
+REPO="$HOME/neoconf/nixos/config"
 CONFIG="$HOME/.config"
 
 link_config() {

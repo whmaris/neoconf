@@ -31,14 +31,7 @@
     luciole.enable = true;
     helium.enable = true;
     zen-browser.enable = true;
-    bash = {
-      enable = true;
-      shellAliases = {
-        nrs = "sudo nixos-rebuild switch --flake ~/neoconf/nixos#ws";
-        ndg = "sudo nix-env --profile /nix/var/nix/profiles/system --delete-generations";
-        ngc = "sudo nix-collect-garbage";
-      };
-    };
+
     fish = {
       enable = true;
       shellAliases = {
