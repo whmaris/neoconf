@@ -14,7 +14,6 @@
       inkscape
       gimp
       unar
-      filen-desktop
       fastfetch
       btop
       zathura
