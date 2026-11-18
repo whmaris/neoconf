@@ -46,7 +46,6 @@
       enable = true;
       enableFishIntegration = true;
     };
-
     eza = {
       enable = true;
       enableFishIntegration = true;
@@ -56,6 +55,58 @@
         "--group-directories-first"
         "--header"
       ];
+    };
+    bat = {
+      enable = true;
+      config = {
+        theme = "base16-256";
+        pager = "less -FR";
+      };
+    };
+    fzf = {
+      enable = true;
+      enableFishIntegration = true;
+    };
+    zoxide = {
+      enable = true;
+      enableFishIntegration = true;
+    };
+    starship = {
+      enable = true;
+      enableBashIntegration = true;
+      enableFishIntegration = true;
+      settings = {
+        add_newline = true;
+        format = "[](fg:#678FE4)[   ](fg:#080B16 bg:#678FE4)[](fg:#678FE4 bg:#1B2437)$directory$git_branch$git_status$nix_shell$cmd_duration$line_break[╰─](fg:#678FE4) $character";
+        character = {
+          success_symbol = "[❯](bold #678FE4)[❯](bold #AB66CC)";
+          error_symbol = "[❯](bold #FD4663)[❯](bold #FD4663)";
+        };
+        directory = {
+          truncation_length = 3;
+          truncation_symbol = "…/";
+          truncate_to_repo = false;
+          style = "fg:#E8EDFF bg:#1B2437 bold";
+          format = "[ $path ]($style)[](fg:#1B2437) ";
+        };
+        git_branch = {
+          style = "fg:#EEF4FF bg:#715CD6 bold";
+          format = "[](fg:#715CD6)[ 󰘬 $branch ]($style)";
+        };
+        git_status = {
+          style = "fg:#EEF4FF bg:#715CD6";
+          format = "[$all_status$ahead_behind ]($style)[](fg:#715CD6) ";
+        };
+        nix_shell = {
+          style = "fg:#181B24 bg:#AB66CC bold";
+          format = "[](fg:#AB66CC)[ 󱄅 nix ]($style)[](fg:#AB66CC) ";
+        };
+        cmd_duration = {
+          min_time = 2000;
+          style = "fg:#AFB1B6 bg:#141B29";
+          format = "[](fg:#141B29)[ 󱫐 $duration ]($style)[](fg:#141B29) ";
+        };
+      };
     };
 
     git = {
