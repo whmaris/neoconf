@@ -1,4 +1,4 @@
 # --- Yazi ---
-nixos/.config/yazi/plugins/
-nixos/.config/yazi/state/
-nixos/.config/yazi/keymap.toml
+nixos/config/yazi/plugins/
+nixos/config/yazi/state/
+nixos/config/yazi/keymap.toml
