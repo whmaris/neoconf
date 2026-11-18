@@ -46,6 +46,18 @@
       enable = true;
       enableFishIntegration = true;
     };
+
+    eza = {
+      enable = true;
+      enableFishIntegration = true;
+      icons = "auto";
+      git = true;
+      extraOptions = [
+        "--group-directories-first"
+        "--header"
+      ];
+    };
+
     git = {
       enable = true;
       settings.user = {
