@@ -1,4 +1,4 @@
-{ pkgs, username, ... }:
+{ pkgs, ... }:
 
 {
   # ============================================================
@@ -31,7 +31,7 @@
     settings.general.renice = 10;
   };
 
-  users.users.${username}.extraGroups = [ "gamemode" ];
+  users.users.neo.extraGroups = [ "gamemode" ];
 
   # Gamescope for resolution scaling and FSR
   programs.gamescope = {
