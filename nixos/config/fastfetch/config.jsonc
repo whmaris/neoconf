@@ -41,7 +41,9 @@
       "type": "command",
       "key": "│ 󰔠  OS Age     ",
       "keyColor": "bright_blue",
-      "text": "echo $(( ($(date +%s) - $(cat ~/.config/fastfetch/install-date 2>/dev/null || stat -c %Y / 2>/dev/null)) / 86400 )) Days"
+      "text" : "echo $(( ($(date +%s) - $(stat -c %Y /etc/machine-id)) / 86400 )) Days" 
+
+
     },
     {
       "type": "custom",
